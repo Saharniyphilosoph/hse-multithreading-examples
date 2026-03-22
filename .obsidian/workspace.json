@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "tasks/hw1_processes_and_threads/launch, tests and benchmarks - homework 1.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
@@ -185,10 +185,19 @@
   },
   "active": "e0035f515fb23d70",
   "lastOpenFiles": [
-    "Pasted image 20260323002012.png",
-    "Pasted image 20260323001950.png",
-    "Pasted image 20260323001919.png",
+    "tasks/hw1_processes_and_threads/assets/img4.png",
+    "tasks/hw1_processes_and_threads/assets/img3.png",
+    "tasks/hw1_processes_and_threads/assets/img2.png",
+    "tasks/hw1_processes_and_threads/launch, tests and benchmarks - homework 1.md",
+    "tasks/hw1_processes_and_threads/assets/img1.png",
+    "assets/Screenshot.md",
+    "assets",
+    "tasks/hw1_processes_and_threads/Pasted image 20260323002012.png",
+    "tasks/hw1_processes_and_threads/Pasted image 20260323001950.png",
+    "Pasted.md",
     "Pasted image 20260323001853.png",
-    "tasks/hw1_processes_and_threads/launch, tests and benchmarks - homework 1.md"
+    "tasks/hw1_processes_and_threads/processes_and_threads.md",
+    "tasks/hw1_processes_and_threads/assets",
+    "Pasted image 20260323001919.png"
   ]
 }
