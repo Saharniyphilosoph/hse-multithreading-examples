@@ -1,10 +1,4 @@
-cmake_minimum_required(VERSION 3.25)
-
-project(buffered_channel LANGUAGES CXX)
-
-set(CMAKE_CXX_STANDARD 23)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_EXTENSIONS OFF)
+project(hw1_processes_and_threads_tests LANGUAGES CXX)
 
 find_package(Threads REQUIRED)
 
@@ -28,8 +22,10 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(googlebenchmark)
 
-add_executable(buffered_channel_test test.cpp)
-target_link_libraries(buffered_channel_test PRIVATE Threads::Threads GTest::gtest GTest::gtest_main)
+add_executable(hw1_processes_and_threads_test test.cpp)
+target_include_directories(hw1_processes_and_threads_test PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/..)
+target_link_libraries(hw1_processes_and_threads_test PRIVATE Threads::Threads GTest::gtest GTest::gtest_main)
 
-add_executable(buffered_channel_benchmark benchmark.cpp)
-target_link_libraries(buffered_channel_benchmark PRIVATE Threads::Threads benchmark::benchmark)
+add_executable(hw1_processes_and_threads_benchmark benchmark.cpp)
+target_include_directories(hw1_processes_and_threads_benchmark PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/..)
+target_link_libraries(hw1_processes_and_threads_benchmark PRIVATE Threads::Threads benchmark::benchmark)
