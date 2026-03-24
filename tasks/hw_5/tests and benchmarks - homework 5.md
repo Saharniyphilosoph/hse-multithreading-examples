@@ -1,0 +1,1 @@
+![601](tasks/hw_5/assets/iimg.png)
