@@ -1,13 +1,5 @@
-cmake_minimum_required(VERSION 3.25)
-
-project(buffered_channel LANGUAGES CXX)
-
-set(CMAKE_CXX_STANDARD 23)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_EXTENSIONS OFF)
-
+project(hw4_ipc_queue_tests LANGUAGES CXX)
 find_package(Threads REQUIRED)
-
 include(FetchContent)
 
 FetchContent_Declare(
@@ -28,8 +20,14 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(googlebenchmark)
 
-add_executable(buffered_channel_test test.cpp)
-target_link_libraries(buffered_channel_test PRIVATE Threads::Threads GTest::gtest GTest::gtest_main)
+add_executable(hw_ipc_test ipc_queue_test.cpp)
+target_include_directories(hw_ipc_test PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/..)
+target_link_libraries(hw_ipc_test PRIVATE Threads::Threads GTest::gtest GTest::gtest_main rt)
 
-add_executable(buffered_channel_benchmark benchmark.cpp)
-target_link_libraries(buffered_channel_benchmark PRIVATE Threads::Threads benchmark::benchmark)
+include(GoogleTest)
+gtest_discover_tests(hw_ipc_test PROPERTIES TIMEOUT 30)
+
+add_executable(hw_ipc_benchmark ipc_queue_benchmark.cpp)
+target_include_directories(hw_ipc_benchmark PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/..)
+target_link_libraries(hw_ipc_benchmark PRIVATE Threads::Threads benchmark::benchmark rt)
+
